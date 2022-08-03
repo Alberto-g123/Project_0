@@ -1,8 +1,9 @@
-package dev.gutierrez.doas;
+package dev.gutierrez.daos;
 
 import dev.gutierrez.entities.Expense;
 
-import java.util.Map;
+import java.util.List;
+
 
 public interface ExpenseDAO {
 
@@ -10,7 +11,7 @@ public interface ExpenseDAO {
 
     Expense getExpenseById(int id);
 
-    Map<Integer, Expense> getAllExpenses();
+    List<Expense> getAllExpenses();
 
     Expense updateExpense(Expense expense);
 

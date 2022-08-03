@@ -1,7 +1,7 @@
 package dev.gutierrez.app;
 
-import dev.gutierrez.doas.EmployeeDaoLocal;
-import dev.gutierrez.doas.ExpenseDaoLocal;
+import dev.gutierrez.daos.EmployeeDaoPostgres;
+import dev.gutierrez.daos.ExpenseDaoLocal;
 import dev.gutierrez.handlers.employee.*;
 import dev.gutierrez.handlers.expense.*;
 import dev.gutierrez.services.EmployeeService;
@@ -12,7 +12,7 @@ import io.javalin.Javalin;
 
 public class App {
 
-    public static EmployeeService employeeService = new EmployeeServiceImpl(new EmployeeDaoLocal());
+    public static EmployeeService employeeService = new EmployeeServiceImpl(new EmployeeDaoPostgres());
     public static ExpenseService expenseService = new ExpenseServiceImpl(new ExpenseDaoLocal());
 
     public static void main(String[] args) {

@@ -1,9 +1,10 @@
 package dev.gutierrez.services;
 
-import dev.gutierrez.doas.ExpenseDAO;
+import dev.gutierrez.daos.ExpenseDAO;
 import dev.gutierrez.entities.Expense;
 
-import java.util.Map;
+import java.util.List;
+
 
 public class ExpenseServiceImpl implements ExpenseService{
    private ExpenseDAO expenseDAO;
@@ -34,8 +35,9 @@ public class ExpenseServiceImpl implements ExpenseService{
     }
 
     @Override
-    public Map<Integer, Expense> getAllExpenses() {
+    public List<Expense> getAllExpenses() {
         return this.expenseDAO.getAllExpenses();
+
     }
 
     @Override

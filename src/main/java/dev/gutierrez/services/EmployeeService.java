@@ -3,13 +3,14 @@ package dev.gutierrez.services;
 import dev.gutierrez.entities.Employee;
 
 
+import java.util.List;
 import java.util.Map;
 
 public interface EmployeeService {
     Employee createEmployee(Employee employee);
 
     Employee getEmployee(int id);
-    Map<Integer,Employee> getAllEmployees();
+    List<Employee> getAllEmployees();
 
     boolean deleteEmployee(int id);
 

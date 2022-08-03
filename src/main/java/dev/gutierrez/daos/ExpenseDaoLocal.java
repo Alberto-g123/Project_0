@@ -1,9 +1,10 @@
-package dev.gutierrez.doas;
+package dev.gutierrez.daos;
 
 
 import dev.gutierrez.entities.Expense;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class ExpenseDaoLocal implements ExpenseDAO{
@@ -26,8 +27,9 @@ public class ExpenseDaoLocal implements ExpenseDAO{
     }
 
     @Override
-    public Map<Integer, Expense> getAllExpenses() {
-        return this.expenseTable;
+    public List<Expense> getAllExpenses() {
+        return null;
+        //return this.expenseTable;
     }
 
     @Override

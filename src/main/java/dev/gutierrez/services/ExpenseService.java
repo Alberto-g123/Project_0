@@ -2,13 +2,14 @@ package dev.gutierrez.services;
 
 import dev.gutierrez.entities.Expense;
 
-import java.util.Map;
+import java.util.List;
+
 
 public interface ExpenseService {
     Expense createExpense(Expense expense);
 
     Expense getExpense(int id);
-    Map<Integer, Expense> getAllExpenses();
+    List<Expense> getAllExpenses();
 
     boolean deleteExpense(int id);
 

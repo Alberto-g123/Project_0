@@ -1,9 +1,11 @@
-package dev.gutierrez.doas;
+package dev.gutierrez.daos;
 
 import dev.gutierrez.entities.Employee;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
 
 public class EmployeeDaoLocal implements EmployeeDAO{
 
@@ -23,7 +25,12 @@ public class EmployeeDaoLocal implements EmployeeDAO{
         return employeeTable.get(id);
     }
 
-    public Map<Integer, Employee> getAllEmployees(){ return this.employeeTable; }
+    @Override
+    public List<Employee> getAllEmployees(){
+        //when it was Map<Integer, Employee>
+        //return this.employeeTable;
+        return  null;
+    }
 
 
 

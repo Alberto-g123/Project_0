@@ -1,8 +1,9 @@
-package dev.gutierrez.doas;
+package dev.gutierrez.daos;
 
 import dev.gutierrez.entities.Employee;
 
-import java.util.Map;
+import java.util.List;
+
 
 public interface EmployeeDAO {
 
@@ -12,7 +13,7 @@ public interface EmployeeDAO {
     // reads employee
     Employee getEmployeeById(int id);
 
-    Map<Integer,Employee> getAllEmployees();
+    List<Employee> getAllEmployees();
 
 
     // update employee

@@ -1,10 +1,10 @@
 package dev.gutierrez.services;
 
-import dev.gutierrez.doas.EmployeeDAO;
+import dev.gutierrez.daos.EmployeeDAO;
 import dev.gutierrez.entities.Employee;
 
 import java.util.List;
-import java.util.Map;
+
 
 public class EmployeeServiceImpl implements EmployeeService{
 
@@ -33,10 +33,10 @@ public class EmployeeServiceImpl implements EmployeeService{
     }
 
     @Override
-    public Map<Integer,Employee> getAllEmployees() {
+    public List<Employee> getAllEmployees() {
         return this.employeeDAO.getAllEmployees();
-
     }
+
 
     @Override
     public boolean deleteEmployee(int id) {
