@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-common:1.5.32" type="kotlin.common">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.5.32/8befc4a20c17094a148f1409c1bac163bc3ca630/kotlin-stdlib-common-1.5.32.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.5.32/15f47c41cca2ac10716e5085cb3b97a3a650f651/kotlin-stdlib-common-1.5.32-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
