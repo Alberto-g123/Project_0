@@ -147,11 +147,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ExpenseDaoTests" />
-        <item itemvalue="JUnit.EmployeeDaoTests" />
+        <item itemvalue="JUnit.ExpenseDaoTests.update_expense_test" />
         <item itemvalue="JUnit.ExpenseDaoTests.get_all_expenses_test" />
         <item itemvalue="JUnit.ExpenseDaoTests.delete_expense_by_id_test" />
-        <item itemvalue="JUnit.ExpenseDaoTests.update_expense_test" />
+        <item itemvalue="JUnit.ExpenseDaoTests" />
+        <item itemvalue="JUnit.EmployeeDaoTests" />
       </list>
     </recent_temporary>
   </component>
