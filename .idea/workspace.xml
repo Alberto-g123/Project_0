@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f33ff750-ad53-469c-a6d2-a10b8ec5f5a8" name="Changes" comment="updated">
-      <change beforePath="$PROJECT_DIR$/src/test/java/dev/gutierrez/smoketests/ConnectionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/gutierrez/smoketests/ConnectionTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dev/gutierrez/mockbasics/MockExampleTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dev/gutierrez/daotests/ExpenseDaoTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dev/gutierrez/daotests/ExpenseDaoTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +44,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2CdG7uaS9x0BKTFhq6tA3d5kPVn" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -49,19 +52,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Work/Project_0&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;two.files.diff.last.used.file&quot;: &quot;D:/Work/week 1/Project_0/src/main/java/dev/gutierrez/handlers/expense/DeleteExpenseHandler.java&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "D:/Work/Project_0",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler",
+    "two.files.diff.last.used.file": "D:/Work/week 1/Project_0/src/main/java/dev/gutierrez/handlers/expense/DeleteExpenseHandler.java"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.ConnectionTests">
+}]]></component>
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="dev.gutierrez.app.App" />
       <module name="Project_0.main" />
