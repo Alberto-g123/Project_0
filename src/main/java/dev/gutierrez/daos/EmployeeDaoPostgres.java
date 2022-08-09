@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class EmployeeDaoPostgres implements EmployeeDAO{
+
+
     @Override
     public Employee createEmployee(Employee employee) {
         try(Connection conn = ConnectionUtil.createConnection()){
@@ -105,18 +107,33 @@ public class EmployeeDaoPostgres implements EmployeeDAO{
     }
 
     @Override
-    public boolean deleteEmployeeById(int id) {
+    public String deleteEmployeeById(int id) {
         try(Connection conn = ConnectionUtil.createConnection()){
-            String sql = "delete from employee where id = ?";
-            PreparedStatement ps = conn.prepareStatement(sql);
-            ps.setInt(1,id);
-            ps.execute();
-            return true;
+            Employee employee =  new Employee();
+            employee = getEmployeeById(id);
+
+            System.out.println(employee);
+
+            if (employee == null){
+                System.out.println("Employee not found");
+                return "error404";
+            } else{
+
+                String sql = "delete from employee where id = ?";
+                PreparedStatement ps = conn.prepareStatement(sql);
+                ps.setInt(1,id);
+                ps.execute();
+                System.out.println("Employee deleted");
+                return "success204";
+
+            }
 
 
         }catch(SQLException e){
             e.printStackTrace();
-            return false;
+            return "issue with delete";
         }
     }
+
+
 }

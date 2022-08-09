@@ -1,42 +1,32 @@
 package dev.gutierrez.entities;
 
-import java.util.Objects;
-
 public class Expense {
 
-    private int id;
+    private int expense_id;
     private double amount;
     private Status status;
     private Type type;
     private String description;
+    private int id_empIssuer;
 
-    public Expense(int id, double amount, Status status, Type type, String description) {
-        this.id = id;
+    public Expense() {
+    }
+
+    public Expense(int expense_id, double amount, Status status, Type type, String description, int id_empIssuer) {
+        this.expense_id = expense_id;
         this.amount = amount;
         this.status = status;
         this.type = type;
         this.description = description;
+        this.id_empIssuer = id_empIssuer;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Expense expense = (Expense) o;
-        return id == expense.id && Double.compare(expense.amount, amount) == 0 && status == expense.status && type == expense.type && Objects.equals(description, expense.description);
+    public int getExpense_id() {
+        return expense_id;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, amount, status, type, description);
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+    public void setExpense_id(int expense_id) {
+        this.expense_id = expense_id;
     }
 
     public double getAmount() {
@@ -71,14 +61,23 @@ public class Expense {
         this.description = description;
     }
 
+    public int getId_empIssuer() {
+        return id_empIssuer;
+    }
+
+    public void setId_empIssuer(int id_empIssuer) {
+        this.id_empIssuer = id_empIssuer;
+    }
+
     @Override
     public String toString() {
         return "Expense{" +
-                "id=" + id +
+                "expense_id=" + expense_id +
                 ", amount=" + amount +
                 ", status=" + status +
                 ", type=" + type +
                 ", description='" + description + '\'' +
+                ", id_empIssuer=" + id_empIssuer +
                 '}';
     }
 }

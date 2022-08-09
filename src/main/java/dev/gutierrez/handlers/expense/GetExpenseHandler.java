@@ -15,7 +15,11 @@ public class GetExpenseHandler implements Handler {
         Expense expense = App.expenseService.getExpense(id);
         Gson gson = new Gson();
         String json = gson.toJson(expense);
-        ctx.result(json);
-
+        if(expense != null){
+            ctx.result(json);
+        }else {
+            ctx.status(404);
+            ctx.result("expense not found");
+        }
     }
 }

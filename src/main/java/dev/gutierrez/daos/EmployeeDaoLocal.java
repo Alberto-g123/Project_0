@@ -41,11 +41,18 @@ public class EmployeeDaoLocal implements EmployeeDAO{
     }
 
     @Override
-    public boolean deleteEmployeeById(int id) {
-         Employee employee = employeeTable.remove(id);
-        if(employee == null){
-            return false;
+    public String deleteEmployeeById(int id) {
+
+        if (employeeTable.get(id).equals(null)){
+            System.out.println("employee not found");
+            return "error404";
+
+        }else{
+            employeeTable.remove(id);
+            return "success204";
         }
-        return true;
+
     }
+
+
 }

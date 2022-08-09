@@ -10,13 +10,17 @@ public class DeleteEmployeeHandler implements Handler {
     @Override
     public void handle(@NotNull Context ctx) throws Exception {
         int id = Integer.parseInt(ctx.pathParam("id"));
-        boolean result = App.employeeService.deleteEmployee(id);
-        if(result){
-            ctx.status(204);
+        String result = App.employeeService.deleteEmployee(id);
+        System.out.println(result);
+        if(result == "success204"){
+            ctx.result("Employee has been removed");
+            ctx.status(202);
+
         }else{
             ctx.status(404);
             ctx.result("Could not find employee");
 
         }
+
     }
 }

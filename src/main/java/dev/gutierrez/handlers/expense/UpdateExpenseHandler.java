@@ -17,7 +17,7 @@ public class UpdateExpenseHandler implements Handler {
             String expenseJson = ctx.body();
             Gson gson = new Gson();
             Expense expense2 = gson.fromJson(expenseJson, Expense.class);
-            expense2.setId(id);
+            expense2.setExpense_id(id);
             Expense updatedExpense = App.expenseService.editExpense(expense2);
             String json = gson.toJson(updatedExpense);
             ctx.result(json);

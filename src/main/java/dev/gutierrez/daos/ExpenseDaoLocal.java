@@ -2,7 +2,9 @@ package dev.gutierrez.daos;
 
 
 import dev.gutierrez.entities.Expense;
+import dev.gutierrez.entities.Status;
 
+import java.sql.PreparedStatement;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,9 +17,9 @@ public class ExpenseDaoLocal implements ExpenseDAO{
 
     @Override
     public Expense createExpense(Expense expense) {
-        expense.setId(idMaker);
+        expense.setExpense_id(idMaker);
         idMaker++;
-        expenseTable.put(expense.getId(), expense);
+        expenseTable.put(expense.getExpense_id(), expense);
         return expense;
     }
 
@@ -27,23 +29,56 @@ public class ExpenseDaoLocal implements ExpenseDAO{
     }
 
     @Override
-    public List<Expense> getAllExpenses() {
+    public List<Expense> getExpenseByEmployee(int id) {
+
         return null;
-        //return this.expenseTable;
+    }
+
+    @Override
+    public List<Expense> getAllExpenses() {
+
+        return null;
+
     }
 
     @Override
     public Expense updateExpense(Expense expense) {
-        expenseTable.put(expense.getId(),expense);
+        expenseTable.put(expense.getExpense_id(),expense);
         return expense;
     }
 
     @Override
-    public boolean deleteExpenseById(int id) {
-        Expense expense = expenseTable.remove(id);
-        if(expense == null){
-            return false;
+    public String deleteExpenseById(int id) {
+        Expense expense = expenseTable.get(id);
+        if (expenseTable.get(id).equals(null))
+        {
+            // throw some error
+            System.out.println("expense not found");
+
+            return "error404";
         }
-        return true;
+
+        if (expense.getStatus() == Status.APPROVED || expense.getStatus() == Status.DENIED)
+        {
+            System.out.println("Cannot delete Expense status");
+            return "error422";
+        }
+
+        expense = expenseTable.remove(id);
+
+        return "success202";
     }
+
+    @Override
+    public List<Expense> getExpenseStatus(Status status){
+        return null;
+    }
+
+    @Override
+    public Expense updateExpenseStatus(int id, Status status) {
+        return null;
+    }
+
+
 }
+

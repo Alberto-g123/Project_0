@@ -39,8 +39,8 @@ public class EmployeeServiceImpl implements EmployeeService{
 
 
     @Override
-    public boolean deleteEmployee(int id) {
-        boolean isSuccessful = this.employeeDAO.deleteEmployeeById(id);
+    public String deleteEmployee(int id) {
+        String isSuccessful = this.employeeDAO.deleteEmployeeById(id);
         return isSuccessful;
     }
 

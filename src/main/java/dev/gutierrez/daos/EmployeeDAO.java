@@ -2,6 +2,7 @@ package dev.gutierrez.daos;
 
 import dev.gutierrez.entities.Employee;
 
+
 import java.util.List;
 
 
@@ -20,6 +21,8 @@ public interface EmployeeDAO {
     Employee updateEmployee(Employee employee);
 
     // Delete employee
-    boolean deleteEmployeeById(int id);
+    String deleteEmployeeById(int id);
+
+
 
 }
