@@ -36,7 +36,7 @@ public class ExpenseDaoTests {
                     "\n" +
                     "\texpense_id serial primary key,\n" +
                     "\tamount int,\n" +
-                    "\tstatus enum1,\n" +
+                    "\tstatus enum1 default 'PENDING',\n" +
                     "\ttype enum2,\n" +
                     "\tdescription varchar(50),\n" +
                     "\tid_empIssuer int references employee(id));";
